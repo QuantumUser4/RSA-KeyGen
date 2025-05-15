@@ -3,8 +3,8 @@ import math
 
 def controlloNum():
     maxN = 100
-    p = int(input("Inserisci un numero minore di 100: "))
-    q = int(input("Inserisci un numero minore di 100: "))
+    p = 19
+    q = 11
     if p > maxN or q > maxN:
         return controlloNum()
     else:
@@ -42,3 +42,13 @@ if __name__ == "__main__":
     chiavePublica, chiavePrivata = result(coprimo, n, d)
     print("Chiave Publica: ", chiavePublica)
     print("Chiave Privata: ", chiavePrivata)
+
+    m = 5
+    c = pow(m, coprimo, n)  
+    print("Valori richiesti:")
+    print("n =", n)
+    print("m =", m)
+    print("ϕ(n) =", indEulero)
+    print("e =", coprimo)
+    print("c =", c)
+    print("d: ", d)
